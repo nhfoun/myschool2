@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRRI High School</title>
+  <link rel="shortcut icon" href="school logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="script.js">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- lun dev code -->
+
+  <!-- The top contact list start -->
+
+  <div class="top-navbar">
+    <div class="email">
+      <i class='bx bxs-envelope'></i>
+
+      <a href="mailto:example@example.com">example@example.com</a>
+    </div>
+    <div class="phone">
+      <i class='bx bxs-phone-call'></i>
+
+      <a href="tel:+1234567890">Call: +1 (234) 567-890</a>
+    </div>
+  </div>
+
+
+  <!-- The top contact list End -->
+
+
+
+
+
+
+
+  <!-- the main navbar starts -->
+  <div class="main-navbar-section-all">
+
+
+
+    <div class="main-navbar-section">
+
+      <div class="logo">
+        <div class="logo-img">
+
+          <img src="school logo.jpg" alt="">
+
+        </div>
+        <div class="logo-txt-xyz">
+          <h1>Bangladesh Rice Research Institute </h1>
+          <h3>(BRRI) High School</h3>
+        </div>
+      </div>
+
+      <div class="admission-in-option">
+        <div class="admissin-btn">
+          <button class="admissin-btn2">
+            <div class="admission-txt">
+              ADMISSION
+            </div>
+            <div class="admission-logo">
+              <i class='bx bxs-user-pin'></i>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="log-in-option">
+        <div class="log-in-btn">
+          <button class="log-in-btn2">
+            <div class="log-in-txt">
+              LOG IN
+            </div>
+            <div class="log-in-logo">
+              <i class='bx bxs-user-circle'></i>
+
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="menu-option">
+        <div class="menu-btn">
+          <div class="menu-btn2 " onclick="toggleMenu()">
+            <div class="menu-txt">
+              MENU
+            </div>
+            <div class="menu-logo hamburger ">
+              <i class='bx bx-menu-alt-right'></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu" id="menu">
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-home' style='color:#fffefe'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Home
+            </div>
+          </div>
+        </a>
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-user-circle' style="color: #fffefe;"></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Log In
+            </div>
+          </div>
+        </a>
+
+
+        <a href="">
+          <div class="menu-home-all ">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-info-circle' style='color:#fffefe'></i></a>
+            </div>
+            <div class="menu-home-txt  academic-info-all clickable-text" onclick="toggleBox()">
+              Academic Info ▼
+
+            </div>
+
+          </div>
+        </a>
+
+        <div id="myBox" class="box academic-info-option">
+
+          <a href="#" role="menuitem">Home</a>
+          <a href="#" role="menuitem">Profile</a>
+          <a href="#" role="menuitem">Settings</a>
+          <a href="#" role="menuitem">Logout</a>
+        </div>
+
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class><i class='bx bxs-registered'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Result
+            </div>
+          </div>
+        </a>
+
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bx-vertical-bottom'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Download
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bx-vertical-bottom'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Download
+            </div>
+          </div>
+        </a>
+
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-contact'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Contact
+            </div>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="menu-home-all ">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-info-circle' style='color:#fffefe'></i></a>
+            </div>
+            <div class="menu-home-txt  academic-info-all clickable-text" onclick="toggleBox()">
+              Academic Info ▼
+
+            </div>
+
+          </div>
+        </a>
+
+        <div id="myBox" class="box academic-info-option">
+
+          <a href="#" role="menuitem">Home</a>
+          <a href="#" role="menuitem">Profile</a>
+          <a href="#" role="menuitem">Settings</a>
+          <a href="#" role="menuitem">Logout</a>
+        </div>
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-user-circle' style="color: #fffefe;"></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Log In
+            </div>
+          </div>
+        </a>
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bx-vertical-bottom'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Download
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bx-vertical-bottom'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Download
+            </div>
+          </div>
+        </a>
+
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-contact'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Contact
+            </div>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="menu-home-all ">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-info-circle' style='color:#fffefe'></i></a>
+            </div>
+            <div class="menu-home-txt  academic-info-all clickable-text" onclick="toggleBox()">
+              Academic Info ▼
+
+            </div>
+
+          </div>
+        </a>
+
+      </div>
+
+
+
+    </div>
+
+
+
+    <div class="mobile-admission-log-in">
+
+      <div class="admission-in-option2">
+        <div class="admissin-btn">
+          <button class="admissin-btn2">
+            <div class="admission-txt">
+              ADMISSION
+            </div>
+            <div class="admission-logo">
+              <i class='bx bxs-user-pin'></i>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="log-in-option2">
+        <div class="log-in-btn">
+          <button class="log-in-btn2">
+            <div class="log-in-txt">
+              LOG IN
+            </div>
+            <div class="log-in-logo">
+              <i class='bx bxs-user-circle'></i>
+
+            </div>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- the main navbar Ends -->
+
+
+
+  <!-- slider -->
+
+
+
+
+
+
+  <!-- The notice board pat starts -->
+
+  <div class="notice-anouncement-part">
+    <div class="anouncement-part-icon">
+      <div class="anouncement-icon">
+        <img src="speaker.png" alt="">
+      </div>
+      <div class="anouncement-icon-txt">
+        <p><b>ANOUNCEMENT</b></p>
+      </div>
+      <div class="anouncement-icon-line">
+        |
+      </div>
+    </div>
+    <div class="announcement-board ">
+      <ul class="announcement-text">
+        <li><a href=""> <i class='bx bxs-circle'></i> Lorem ipsum dolor sit amet.</a></li>
+        <li><a href=""> <i class='bx bxs-circle'></i> Lorem ipsum dolor sit Lorem, ipsum dolor. </a></li>
+        <li><a href=""> <i class='bx bxs-circle'></i> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.</a> </li>
+        <li> <a href=""> <i class='bx bxs-circle'></i> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+            consectetur. </a></li>
+
+        </ol>
+    </div>
+  </div>
+
+
+  <!-- The notice board part ends -->
+
+
+
+  <div class="slider">
+    <!-- list Items -->
+    <div class="list">
+      <div class="item active">
+        <img src="slide img2.jpg">
+        <div class="content">
+          <p>design</p>
+          <h2>Slider 01</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+          <div class="wrapper">
+            <a href="" class="button1" id="slider-btn">button
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+
+            </a>
+          </div>
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="slide img1.jpg">
+        <div class="content">
+          <p>design</p>
+          <h2>Slider 02</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+          <div class="wrapper">
+            <a href="" class="button1" id="slider-btn">button
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+
+            </a>
+          </div>
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="ed-us-uHPfTGy-Lto-unsplash.jpg">
+        <div class="content">
+          <p>design</p>
+          <h2>Slider 03</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+          <div class="wrapper">
+            <a href="" class="button1" id="slider-btn">button
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+
+            </a>
+          </div>
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="pexels-yogendras31-3231359.jpg">
+        <div class="content">
+          <p>design</p>
+          <h2>Slider 04</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+          <div class="wrapper">
+            <a href="" class="button1" id="slider-btn">button
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+
+            </a>
+          </div>
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="slideimg4.jpg">
+        <div class="content">
+          <p>design</p>
+          <h2>Slider 05</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+          <div class="wrapper">
+            <a href="" class="button1" id="slider-btn">button
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+
+            </a>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- button arrows -->
+    <div class="arrows">
+      <button id="prev">
+        < </button>
+          <button id="next">></button>
+    </div>
+    <!-- thumbnail -->
+    <div class="thumbnail">
+      <div class="item active">
+        <img src="slide img2.jpg">
+        <div class="content">
+          Name Slider
+        </div>
+      </div>
+      <div class="item">
+        <img src="slide img1.jpg">
+        <div class="content">
+          Name Slider
+        </div>
+      </div>
+      <div class="item">
+        <img src="ed-us-uHPfTGy-Lto-unsplash.jpg">
+        <div class="content">
+          Name Slider
+        </div>
+      </div>
+      <div class="item">
+        <img src="pexels-yogendras31-3231359.jpg">
+        <div class="content">
+          Name Slider
+        </div>
+      </div>
+      <div class="item">
+        <img src="slideimg4.jpg">
+        <div class="content">
+          Name Slider
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Home-about-us-and-result-starts -->
+
+  <div class="Home-about-us-and-result-all-option">
+    <div class="Home-about-us-and-result-option">
+      <div class="Home-about-us-option">
+        <div class="Home-about-title">
+          <h2>About</h2>
+          <h1>Bangladesh Rice Research Institute High School</h1>
+
+        </div>
+        <div class="Home-about-txt-all">
+          <div class="Home-about-txt1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat assumenda quia atque, vero placeat
+              molestiae
+              fuga reiciendis consectetur ad id iusto dolorem fugit cum repellendus culpa, vitae commodi consequatur
+              ipsum
+              consequuntur, amet voluptatem sint ea. Facere dolor ducimus tempora quos asperiores, ab beatae enim
+              possimus
+              accusamus eaque, architecto commodi aspernatur?Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Magnam aut aliquid provident magni earum reiciendis suscipit sunt minus facere? Amet? Lorem ipsum dolor
+              sit, amet consectetur adipisicing elit. Officiis qui, necessitatibus id debitis expedita accusamus dolores
+              quaerat aspernatur vitae minus itaque, recusandae magni saepe omnis deserunt culpa. Itaque, maiores
+              distinctio! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci ipsa iusto delectus nihil
+              alias voluptatibus vero quasi eligendi odit quaerat! </p>
+            <div class="wrapper">
+              <a href="" class="button1">button
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+              </a>
+            </div>
+          </div>
+          <div class="Home-about-txt2">
+            <img src="campus pic.jpeg" alt="">
+            <h2>The Campus of the school is ...</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat assumenda quia atque, vero placeat
+              molestiae
+              Lorem ipsum dolor sit Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            <div class="wrapper">
+              <a href="" class="button1">button
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+              </a>
+            </div>
+            </p>
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <div class="Home-result-option">
+
+        <div class="Home-result-txt-bg">
+
+          <div class="Home-result-txt">
+            <h2>SSC Result 2024</h2>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="Home-result-txt-bg2">
+          <div class="Home-result-txt2">
+            <h2>SSC Result 2023</h2>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="Home-result-txt-bg3">
+          <div class="Home-result-txt3">
+            <h2>SSC Result 2022</h2>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- Home-about-us-ends -->
+
+
+  <!-- Latest news,events,notice borad starts -->
+
+
+  <div class="notice-container">
+    <!-- Latest News -->
+    <div class="card">
+      <h3>Latest News</h3>
+      <p>17 Oct 2022 Consolidated Academic Calendar 📅</p>
+    </div>
+
+    <!-- Upcoming Events -->
+    <div class="card">
+      <h3>Upcoming Events</h3>
+      <div class="event">
+        <div class="event-date">
+          5<br><span class="month">April</span>
+        </div>
+        <p>Seminar is conducted on BCA courses.</p>
+      </div>
+      <div class="event">
+        <div class="event-date">
+          7<br><span class="month">April</span>
+        </div>
+        <p>Seminar is conducted on B.Com courses.</p>
+      </div>
+      <div class="event">
+        <div class="event-date">
+          22<br><span class="month">April</span>
+        </div>
+        <p>Conducted its 2nd convocation ceremony.</p>
+      </div>
+      <div class="event">
+        <div class="event-date">
+          1<br><span class="month">May</span>
+        </div>
+        <p>Annual Meeting for Batch of BBA (2018 to 2021)...</p>
+      </div>
+      <div class="event">
+        <div class="event-date">
+          1<br><span class="month">May</span>
+        </div>
+        <p>Annual Meeting for Batch of BBA (2018 to 2021)...</p>
+      </div>
+      <div class="event">
+        <div class="event-date">
+          1<br><span class="month">May</span>
+        </div>
+        <p>Annual Meeting for Batch of BBA (2018 to 2021)...</p>
+      </div>
+      <div class="event">
+        <div class="event-date">
+          1<br><span class="month">May</span>
+        </div>
+        <p>Annual Meeting for Batch of BBA (2018 to 2021)...</p>
+      </div>
+
+      <div class="event">
+        <div class="event-date">
+          1<br><span class="month">May</span>
+        </div>
+        <p>Annual Meeting for Batch of BBA (2018 to 2021)...</p>
+      </div>
+    </div>
+
+    <!-- Notice Board -->
+    <div class="card">
+      <h3>Notice Board</h3>
+      <ul>
+        <li>Participation in Climate Correction Day (CCCD) Challenge</li>
+        <li>West Zone Inter University Table Tennis (men) Tournament 2022-23</li>
+        <li>PhD Registration Form for Selected Candidates</li>
+        <li>List of Activities organised under TEQIP-III</li>
+        <li>Documents for empanelment of vendor for A Class contractor</li>
+        <li>School of Architecture College Level Counselling 2022-23</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!--Latest news,events,notice borad ends  -->
+
+
+
+  <!-- feselities of the school starts -->
+
+  <div class="bg-faci-all">
+    <div class="faci-title">
+      <h1>Excellent Facilities of <br>Our School</h1>
+    </div>
+  </div>
+
+
+  <div class="faci-content-all">
+    <div class="faci-bg">
+      <div class="faci-bg2">
+        <div class="fac-con-1">
+          <div class="faci-con">
+            <div class="faci-icon">
+              <i class='bx bxs-user-pin'></i>
+            </div>
+            <div class="faci-txt">
+              <h3>School Programmme</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, alias!</p>
+            </div>
+          </div>
+
+          <div class="faci-con">
+            <div class="faci-icon">
+              <i class='bx bxs-user-pin'></i>
+            </div>
+            <div class="faci-txt">
+              <h3>School Programmme</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, alias!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="fac-con-2">
+          <div class="faci-con">
+            <div class="faci-icon">
+              <i class='bx bxs-user-pin'></i>
+            </div>
+            <div class="faci-txt">
+              <h3>School Programmme</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, alias!</p>
+            </div>
+          </div>
+          <div class="faci-con">
+            <div class="faci-icon">
+              <i class='bx bxs-user-pin'></i>
+            </div>
+            <div class="faci-txt">
+              <h3>School Programmme</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, alias!</p>
+            </div>
+          </div>
+        </div>
+        <div class="orange-bar"></div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <!-- feselities of the school ends  -->
+
+
+
+    <!-- testimonial starts -->
+
+
+    <div class="message-container">
+      <!-- Image + Quote box -->
+      <div class="quote-icon">❝</div>
+      <div class="message-image">
+        <!-- <div class="quote-icon">❝</div> -->
+        <img src="head sir pic.png" alt="Headmaster">
+        <!-- <div class="quote-box">
+        Teamwork is the ability to work together toward a common vision.
+      </div> -->
+      </div>
+
+      <!-- Text content -->
+      <div class="message-text">
+        <div class="quote-icon" id="quote-id">❝</div>
+        <div class="message-title">Headmaster's Message</div>
+        <div class="test-title-line">
+
+        </div>
+        <div class="sub-quote">Education Is Not the Filling of a Pail, But the Lighting of a Fire.</div>
+        <div class="message-body">
+          I am pleased to share that I am thankful for your good wishes, the guidance of a most supportive and
+          enlightened
+          Board, a very supportive community, dedicated staff and the blessings of the Almighty! Indeed, it is not only
+          most humbling but also a singular privilege to be entrusted this high honor Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Omnis cupiditate nihil facilis nesciunt assumenda ea....
+        </div>
+        <div class="wrapper">
+          <a href="" class="button1" id="slider-btn">button
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+          </a>
+        </div>
+
+        <span class="quote-icon quote-icon2">❞</span>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="message-container message-container2">
+
+
+      <!-- Text content -->
+      <div class="message-text massage-text2">
+        <div class="quote-icon3">❝</div>
+        <div class="message-title">Assi. Headmaster's Message</div>
+        <div class="test-title-line">
+
+        </div>
+        <div class="sub-quote">Education Is Not the Filling of a Pail, But the Lighting of a Fire.</div>
+        <div class="message-body">
+          I am pleased to share that I am thankful for your good wishes, the guidance of a most supportive and
+          enlightened
+          Board, a very supportive community, dedicated staff and the blessings of the Almighty! Indeed, it is not only
+          most humbling but also a singular privilege to be entrusted this high honor Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Quo consectetur, modi inventore veritatis deserunt soluta....
+        </div>
+        <div class="wrapper">
+          <a href="" class="button1" id="slider-btn">button
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- Image + Quote box -->
+      <div class="message-image massage-img2">
+        <img src="assistant-head-sir-pic.png" alt="Headmaster">
+        <!-- <div class=" quote-box2">
+        Teamwork is the ability to work together toward a common vision.
+      </div> -->
+
+        <span class="quote-icon4">❞</span>
+      </div>
+    </div>
+
+
+    <!-- testimonial ends -->
+
+
+
+
+    <!-- Blogs and events starts -->
+
+    <div class="blog-envents-all-option">
+      <div class="blog-event-all">
+        <div class="blog-event-title">
+          <h1>Leatest Blog</h1>
+          <div class="blog-event-line">
+
+          </div>
+        </div>
+        <div class="blog-event">
+          <div class="blog-card-all">
+            <div class="events">
+              <div class="event-card">
+                <div class="event-image" style="background-image: url('pexels-yogendras31-3231359.jpg');">
+                  <div class="events-date">
+                    <div class="day">23</div>
+                    <div class="month-year">Apr 2025</div>
+                  </div>
+                </div>
+                <div class="event-content">
+                  <div class="event-title">ATS Chief Financial Officers Webinar Series Part Four</div>
+                  <div class="event-desc">Designed for ATS member school chief financial officers, the final in this four-part webinar series will explore how shared services can optimize resources and reduce costs in theological education.</div>
+                </div>
+                <div class="wrapper2 ">
+                  <a href="" class="button1 button2" id="slider-btn">button
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+        
+                  </a>
+                </div>
+              </div>
+          
+              <div class="event-card">
+                <div class="event-image" style="background-image: url('ed-us-uHPfTGy-Lto-unsplash.jpg');">
+                  <div class="events-date">
+                    <div class="day">24</div>
+                    <div class="month-year">Apr 2025</div>
+                  </div>
+                </div>
+                <div class="event-content">
+                  <div class="event-title">ATS Development and Institutional Advancement Program Roundtable</div>
+                  <div class="event-desc">Designed for development and communications professionals, this virtual roundtable will allow attendees to share insights from the 2025 DIAP conference.</div>
+                </div>
+                <div class="wrapper2 ">
+                  <a href="" class="button1 button2" id="slider-btn">button
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+        
+                  </a>
+                </div>
+              </div>
+          
+              <div class="event-card">
+                <div class="event-image" style="background-image: url('slide\ img2.jpg');">
+                  <div class="events-date">
+                    <div class="day">28</div>
+                    <div class="month-year">Apr 2025</div>
+                  </div>
+                </div>
+                <div class="event-content">
+                  <div class="event-title">ATS and Auburn Research Webinar on Executive Leadership Turnover</div>
+                  <div class="event-desc">Designed for those in executive and cabinet leadership positions at ATS member schools, this webinar will share findings from the Auburn Research Study on Executive Leadership Turnover.</div>
+                </div>
+                <div class="wrapper2 ">
+                  <a href="" class="button1 button2" id="slider-btn">button
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+        
+                  </a>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+      <div class="event-blog-bg">
+
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- Blogs and event ends -->
+
+
+
+
+
+
+    <!-- Footer starts -->
+
+
+    <footer>
+      <div class="all-footer">
+        <div class="container4">
+          <div class="about-footer">
+            <img src="school logo.jpg" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, velit hic repellat veniam vitae neque
+              nostrum
+              quod quidem optio cumque.</p>
+          </div>
+          <div class="nav-links-footer">
+            <h2 class="nav-links-tittle "><span>Our Links</span></h2>
+            <h5>Home</h5>
+            <h5>About Us</h5>
+            <h5>Services</h5>
+            <h5>Projects</h5>
+            <h5>News</h5>
+            <h5>Contact Us</h5>
+          </div>
+          <div class="servises-footer">
+            <h2 class="nav-links-tittle "><span>Our Servises</span></h2>
+            <h5>2D/3D Layouts</h5>
+            <h5>Retail Desings</h5>
+            <h5>Interiour Desings</h5>
+            <h5>2D/3D Layouts</h5>
+            <h5>Retail Desings</h5>
+            <h5>Interiour Desings</h5>
+          </div>
+          <div class="newssletter">
+            <h2 class="nav-links-tittle "><span>Newssletter</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="links-footer">
+              <a href=""> <i class='bx bxl-facebook icon-hover-fill icon-1'></i></a>
+              <a href=""> <i class='bx bxl-instagram icon-hover-fill icon-2'></i></a>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="details-footer">
+          <div class="call-footer">
+            <div class="call-icon">
+              <img src="img18.webp" alt="">
+            </div>
+            <div class="call-txt">
+              <h2>Call Us Now</h2>
+              <p>+880 17177 34248</p>
+            </div>
+          </div>
+          <div class="email-footer">
+            <div class="email-icon">
+              <img src="img19.webp" alt="">
+            </div>
+            <div class="email-txt">
+              <h2>Email Address</h2>
+              <p>txtail1234@gmail.com</p>
+            </div>
+          </div>
+          <div class="location-footer">
+            <div class="location-icon">
+              <img src="img20.webp" alt="">
+            </div>
+            <div class="location-txt">
+              <h2>Location</h2>
+              <p>B/3 BARI,Gazipur</p>
+            </div>
+          </div>
+        </div>
+        <div class="last-txt">
+          <h4>Developed by <a target="_blank" href="https://www.facebook.com/">Mohammad Safwan</a> from <a href="">MSMS
+              Tech Ld.</a></h4>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+    <!-- Footer ends -->
+
+
+
+    <!-- Js starts -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <!-- Js ends -->
+</body>
+
+</html>

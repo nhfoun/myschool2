@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+	background: #f5f5f5;
+	font-family: "Plus Jakarta Sans", sans-serif;
+	background: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 700;
+	color: #fff;
+}
+
+#navbarNav {
+	background: transparent;
+	margin-left: 2em;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #191919 !important;
+}
+
+.gallery {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.container {
+	max-width: 100vw;
+	position: relative;
+	margin-bottom: 500px;
+}
+
+.filter-range {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#svg-filters {
+	position: absolute;
+}
+
+.card {
+	margin-top: 24px;
+	margin-bottom: 24px;
+	border-radius: 24px;
+	padding: 24px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+		rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+	border: none;
+}
+
+#search {
+	border-radius: 24px;
+	border: none;
+	padding: 12px;
+	float: right;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+		rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+#image {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 11000px;
+	object-position: center bottom;
+	margin-bottom: 2000px;
+	z-index: -1;
+}
+
+.deep {
+	cursor: url(https://drive.google.com/thumbnail?id=14ZwyOC0zZQLJwVVwNjAo-m4F7E44-bV5&sz=w96)
+			48 48,
+		auto;
+}
+
+.species img {
+	cursor: url(https://drive.google.com/thumbnail?id=1w138J4r1-wCAGFIGBkOo9Ap7ObaO0t4f&sz=w96)
+			48 48,
+		auto;
+}
+
+.card h5 {
+	margin-bottom: 24px;
+}
+
+.buttons {
+	margin-bottom: 24px;
+}
+
+.btn {
+	border-radius: 24px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+		rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.measures {
+	position: fixed;
+	top: 80px;
+	right: 48px;
+	text-align: right;
+	font-size: 2em;
+	font-weight: 800;
+	color: #ccc;
+	mix-blend-mode: hard-light;
+}
+
+.active {
+	opacity: 100%;
+	transition: all 1s;
+}
+
+.sky {
+	width: 100vw;
+	height: 800px;
+	background: url("https://drive.google.com/thumbnail?id=1ZLMVeoB0fG5KXgN4Q-rqIt9kAVxqrWcT&sz=w1000");
+	background-size: cover;
+	margin-bottom: -56px;
+}
+
+.sky h1 {
+	font-size: 5rem;
+	color: black;
+	mix-blend-mode: multiply;
+	text-align: center;
+}
+
+.end {
+	width: 100vw;
+	height: 100vh;
+
+	margin-bottom: -56px;
+	position: absolute;
+	top: 12800px;
+}
+
+.end h1 {
+	font-size: 5rem;
+	color: white;
+	text-align: center;
+}
+
+.species,
+.titles {
+	opacity: 0;
+	transition: all 2s;
+}
+
+.visible {
+	opacity: 1;
+}
+
+.species:hover {
+	opacity: 1;
+	transition: all 2s;
+}
+
+.species {
+	position: absolute;
+	z-index: 1;
+	padding-top: 56px;
+}
+
+.titles {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	padding-top: 56px;
+}
+
+.species.active,
+.titles.active {
+	opacity: 1;
+}
+
+.species img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 50%;
+	width: 200px;
+	/* Adjust size as needed */
+	height: 200px;
+	/* Adjust size as needed */
+	transition: transform 0.5s ease-in-out;
+	transition: all 1s;
+	object-fit: cover;
+	border: 10px solid rgba(255, 255, 255, 0.1);
+}
+
+.species.active img {
+	transform: scale(1);
+}
+
+.species .description {
+	text-align: center;
+}
+
+.species.active .description.active {
+	opacity: 1;
+}
+
+.species .description h2 {
+	font-size: 1.5em;
+	margin-top: 10px;
+	color: #fff;
+}
+
+.species .description p {
+	font-size: 1em;
+	color: #ccc;
+}
+
+.sunlight {
+	top: 0;
+}
+
+.twilight {
+	top: 200px;
+}
+
+.midnight {
+	top: 1000px;
+}
+
+.abyss {
+	top: 4000px;
+}
+
+.trench {
+	top: 6000px;
+}
+
+.main-title {
+	height: 100%;
+	flex-direction: column;
+}
+
+.titles h1 {
+	font-size: 3em;
+	font-weight: 900;
+	margin-top: 0px;
+	text-align: left;
+	color: white;
+	border-top: 1px solid white;
+}
+
+.titles span {
+	font-size: 1em;
+	font-weight: 400;
+	margin-top: 0px;
+	text-align: left;
+	color: #ccc;
+}
+
+.coelacanth {
+	top: 200px;
+	left: 50%;
+	margin-left: -200px;
+}
+
+.japanese-spider-crab {
+	top: 300px;
+	left: 50%;
+	margin-left: 100px;
+}
+
+.cuttlefish {
+	top: 600px;
+	left: 50%;
+	margin-left: -100px;
+}
+
+.sea-angel {
+	top: 600px;
+	left: 50%;
+	margin-left: 250px;
+}
+
+.nautilus {
+	top: 700px;
+	left: 50%;
+	margin-left: -400px;
+}
+
+.cockatoo-squid {
+	top: 1300px;
+	left: 50%;
+	margin-left: 100px;
+}
+
+.headless-chicken-fish {
+	top: 1000px;
+	left: 50%;
+	margin-left: 200px;
+}
+
+.vampire-squid {
+	top: 1200px;
+	left: 50%;
+	margin-left: -400px;
+}
+
+.goblin-shark {
+	top: 1300px;
+	left: 50%;
+	margin-left: -150px;
+}
+
+.firework-jellyfish {
+	top: 1500px;
+	left: 50%;
+	margin-left: -400px;
+}
+
+.dragonfish {
+	top: 1500px;
+	left: 50%;
+	margin-left: 300px;
+}
+
+.barreleye-fish {
+	top: 2500px;
+	left: 50%;
+	margin-left: -400px;
+}
+
+.anglerfish {
+	top: 2500px;
+	left: 50%;
+	margin-left: -100px;
+}
+
+.chimaera {
+	top: 2600px;
+	left: 50%;
+	margin-left: 200px;
+}
+
+.pelican-eel {
+	top: 3000px;
+	left: 50%;
+	margin-left: -400px;
+}
+
+.deepsea-lizardfish {
+	top: 3500px;
+	left: 50%;
+	margin-left: -100px;
+}
+
+.titanic {
+	top: 3800px;
+	left: 50%;
+	margin-left: 200px;
+}
+
+.atolla-jellyfish {
+	top: 4000px;
+	left: 50%;
+	margin-left: -400px;
+}
+
+.fangtooth {
+	top: 5000px;
+	left: 50%;
+	margin-left: -400px;
+}
+
+.faceless-fish {
+	top: 5100px;
+	left: 50%;
+	margin-left: 200px;
+}
+
+.grenadier {
+	top: 7000px;
+	left: 50%;
+	margin-left: 200px;
+}
+
+.dumbo-octopus {
+	top: 7000px;
+	left: 50%;
+	margin-left: -400px;
+}
+
+.comb-jelly {
+	top: 7210px;
+	left: 50%;
+	margin-left: -100px;
+}
+
+.hadal-snailfish {
+	top: 8100px;
+	left: 50%;
+	margin-left: 200px;
+}
+
+.sea-pig {
+	top: 10000px;
+	left: 50%;
+	margin-left: -300px;
+}
+
+.alicella {
+	top: 10300px;
+	left: 50%;
+	margin-left: 100px;
+}
+
+.deepsea {
+	top: 10898px;
+	left: 50%;
+	margin-left: -200px;
+}
+.fangtooth img,
+.faceless-fish img {
+	object-position: left;
+}
+.barreleye-fish img {
+	object-position: right;
+}
+/* Existing styles for the custom cursors */
+#custom-pointer-cursor,
+#custom-cursor {
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	transition: transform 0.1s ease-in-out;
+	z-index: 9999;
+	display: none;
+	background-size: 384px 96px; /* Ensure the sprite sheet is scaled correctly */
+	animation: cursorAnimation 0.8s steps(4) infinite;
+}
+
+@keyframes cursorAnimation {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: -384px 0;
+	}
+}
+
+#pointer,
+#submarine {
+	width: 96px;
+	height: auto;
+	margin-top: -48px;
+	margin-left: -48px;
+	transition: rotate 0s ease-in-out;
+}
+
+.mouse-scroll {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.mouse {
+	width: 48px;
+	height: 80px;
+	border: 4px solid #000;
+	border-radius: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: start;
+}
+
+.wheel {
+	width: 8px;
+	height: 16px;
+	background-color: #000;
+	border-radius: 4px;
+	animation: scroll 1s infinite;
+	margin-top: 8px;
+}
+
+/* Scroll animation */
+@keyframes scroll {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(8px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.arrow {
+	width: 10px;
+	height: 10px;
+	border-right: 2px solid #000;
+	border-bottom: 2px solid #000;
+	transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 600px) {
+	.deep {
+		transform: scale(0.5);
+		margin-top: -125px;
+	}
+
+	.measures {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.deep {
+		transform: scale(0.5);
+		margin-top: -125px;
+	}
+
+	.measures {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.deep {
+		transform: scale(0.6);
+		margin-top: -100px;
+	}
+
+	.measures {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.deep {
+		transform: scale(0.6);
+		margin-top: -100px;
+	}
+
+	.measures {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.deep {
+		transform: scale(1);
+		margin-top: 56px;
+	}
+
+	.measures {
+		display: block;
+	}
+}
+
+.hideAll {
+	display: none;
+}
+
+a {
+	color: #1f2226;
+}
+
+  </style>
+</head>
+<body>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#sunlight">Sunlight</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#twilight">Twilight</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#midnight">Midnight</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#abyss">Abyss</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#trench">Trench</a>
+          </li>
+          <li class="nav-item elements">
+            <div class="nav-link active">Items discovered : <span id="elementsNumber">0</span>/27</div>
+          </li>
+          <li class="showAll nav-item">
+            <div id="showAll" class="btn btn-primary nav-link active">Show All</div>
+          </li>
+          <li class="hideAll nav-item">
+            <div id="hideAll" class="btn btn-primary nav-link active">Hide All</div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="sky">
+      <div class="main-title row d-flex justify-content-center align-items-center">
+        <div class="col-12">
+          <div class="d-flex justify-content-center">
+            <h1>Scroll to the Abyss</h1>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="d-flex justify-content-center">
+            <span>Uncover Hidden Treasures and Marine Wonders</span>
+          </div>
+        </div>
+        <div class="col-12 mt-5">
+          <div class="d-flex justify-content-center">
+            <div class="mouse-scroll">
+              <div class="mouse">
+                <div class="wheel"></div>
+              </div>
+              <div class="arrow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container deep">
+      <div class="row">
+        <div class="col">
+          <div class="d-flex justify-content-center">
+            <div class="container">
+              <img id="image" src="https://drive.google.com/thumbnail?id=1w7Jx-qQ1lvv5IGht1FNd7Zbudo6tnlKB&sz=w1000">
+              <div class="deep"></div>
+              <div class="titles sunlight" id="sunlight">
+                <div class="title">
+                  <h1 class="no-span">Sunlight Zone</h1>
+                  <span>0-200m</span>
+                </div>
+              </div>
+              <div class="titles twilight" id="twilight">
+                <div class="title">
+                  <h1 class="no-span">Twilight Zone</h1>
+                  <span>200-1000m</span>
+                </div>
+              </div>
+              <div class="titles midnight" id="midnight">
+                <div class="title">
+                  <h1 class="no-span">Midnight Zone</h1>
+                  <span>1000-4000m</span>
+                </div>
+              </div>
+              <div class="titles abyss" id="abyss">
+                <div class="title">
+                  <h1 class="no-span">The Abyss</h1>
+                  <span>4000-6000m</span>
+                </div>
+              </div>
+              <div class="titles trench" id="trench">
+                <div class="title">
+                  <h1 class="no-span">The Trench</h1>
+                  <span>6000-11000m</span>
+                </div>
+              </div>
+              <div class="species coelacanth">
+                <img src="https://drive.google.com/thumbnail?id=1G5YadSz_wl_CDe-1kUHqU_q5BF53DKPe&sz=w1000">
+                <div class="description">
+                  <h2>Coelacanth</h2>
+                  <p>200m</p>
+                </div>
+              </div>
+              <div class="species japanese-spider-crab">
+                <img src="https://drive.google.com/thumbnail?id=1F7RFIoCdd4Q5tsGnYbXZaeOG2tbo2uG6&sz=w1000">
+                <div class="description">
+                  <h2>Japanese Spider Crab</h2>
+                  <p>610m</p>
+                </div>
+              </div>
+              <div class="species cuttlefish">
+                <img src="https://drive.google.com/thumbnail?id=1qqBHqYdVvmWdhmnpWSjeszmUoEGvFB3U&sz=w1000">
+                <div class="description">
+                  <h2>Cuttlefish</h2>
+                  <p>600m</p>
+                </div>
+              </div>
+              <div class="species sea-angel">
+                <img src="https://drive.google.com/thumbnail?id=1CeU-0N9PBCCK9AhvkArvrOEesvkItvPL&sz=w1000">
+                <div class="description">
+                  <h2>Sea Angel</h2>
+                  <p>600m</p>
+                </div>
+              </div>
+              <div class="species nautilus">
+                <img src="https://drive.google.com/thumbnail?id=13fkdRcgc0sWUsoJquKRxHazEOnxEjQVo&sz=w1000">
+                <div class="description">
+                  <h2>Nautilus</h2>
+                  <p>700m</p>
+                </div>
+              </div>
+              <div class="species cockatoo-squid">
+                <img src="https://drive.google.com/thumbnail?id=12vUDJnST5M03vCnexc3rCPOC9OXJG40k&sz=w1000">
+                <div class="description">
+                  <h2>Cockatoo Squid</h2>
+                  <p>1300m</p>
+                </div>
+              </div>
+              <div class="species headless-chicken-fish">
+                <img src="https://drive.google.com/thumbnail?id=1vzbE80rnGLG74sZ2osby8GYZbwbFu9fa&sz=w1000">
+                <div class="description">
+                  <h2>Headless Chicken Fish</h2>
+                  <p>1000m</p>
+                </div>
+              </div>
+              <div class="species vampire-squid">
+                <img src="https://drive.google.com/thumbnail?id=18GWkOeom4Nq5xPswldWrfWmh9AyXCVLY&sz=w1000">
+                <div class="description">
+                  <h2>Vampire Squid</h2>
+                  <p>1200m</p>
+                </div>
+              </div>
+              <div class="species goblin-shark">
+                <img src="https://drive.google.com/thumbnail?id=10Sd73fDfGAJnlpzERRpGfdCHmkK5wA9C&sz=w1000">
+                <div class="description">
+                  <h2>Goblin Shark</h2>
+                  <p>1300m</p>
+                </div>
+              </div>
+              <div class="species firework-jellyfish">
+                <img src="https://drive.google.com/thumbnail?id=1yKKAAxr2pXG4GfFV7DmklOMfOtm6176L&sz=w1000">
+                <div class="description">
+                  <h2>Firework Jellyfish</h2>
+                  <p>1500m</p>
+                </div>
+              </div>
+              <div class="species dragonfish">
+                <img src="https://drive.google.com/thumbnail?id=1IV7cX9A3r1hnQivlw3--6MMZjKbcYHka&sz=w1000">
+                <div class="description">
+                  <h2>Dragonfish</h2>
+                  <p>1500m</p>
+                </div>
+              </div>
+              <div class="species barreleye-fish">
+                <img src="https://drive.google.com/thumbnail?id=1dkkAPYqq-CU5JrghehUnVRo4RT6uADet&sz=w1000">
+                <div class="description">
+                  <h2>Barreleye Fish</h2>
+                  <p>2500m</p>
+                </div>
+              </div>
+              <div class="species anglerfish">
+                <img src="https://drive.google.com/thumbnail?id=1u5zJdTHwjkE-rIJMCT8NqD40qgVDj0WU&sz=w1000">
+                <div class="description">
+                  <h2>Anglerfish</h2>
+                  <p>2500m</p>
+                </div>
+              </div>
+              <div class="species chimaera">
+                <img src="https://drive.google.com/thumbnail?id=1lf3PX4lhWFxjwvd_HJUKKizfqY3BcR4K&sz=w1000">
+                <div class="description">
+                  <h2>Chimaera</h2>
+                  <p>2600m</p>
+                </div>
+              </div>
+              <div class="species pelican-eel">
+                <img src="https://drive.google.com/thumbnail?id=1HAAga3FrhKYkRIplM2x06ZOYxOtRz37d&sz=w1000">
+                <div class="description">
+                  <h2>Pelican Eel</h2>
+                  <p>3000m</p>
+                </div>
+              </div>
+              <div class="species deepsea-lizardfish">
+                <img src="https://drive.google.com/thumbnail?id=1YbWxQGSJiv2qOPJxC3v0Gy0z1gDYXuaI&sz=w1000">
+                <div class="description">
+                  <h2>Deepsea Lizardfish</h2>
+                  <p>3500m</p>
+                </div>
+              </div>
+              <div class="species titanic">
+                <img src="https://drive.google.com/thumbnail?id=1IwppmFLfCXoLxF3HXJq3KQn9TIPLe4cP&sz=w1000">
+                <div class="description">
+                  <h2>Titanic</h2>
+                  <p>3800m</p>
+                </div>
+              </div>
+              <div class="species atolla-jellyfish">
+                <img src="https://drive.google.com/thumbnail?id=1EdVK4XEOr2Q99HuFMd2fUY88vDvLcuTX&sz=w1000">
+                <div class="description">
+                  <h2>Atolla Jellyfish</h2>
+                  <p>4000m</p>
+                </div>
+              </div>
+              <div class="species fangtooth">
+                <img src="https://drive.google.com/thumbnail?id=10qlp51i2dgMnfZ1u0_Ep7I0aIj7Wn32F&sz=w1000">
+                <div class="description">
+                  <h2>Fangtooth</h2>
+                  <p>5000m</p>
+                </div>
+              </div>
+              <div class="species faceless-fish">
+                <img src="https://drive.google.com/thumbnail?id=16BIpdj0C-TIUgcSIyDFyOazA74g9kY3t&sz=w1000">
+                <div class="description">
+                  <h2>Faceless Fish</h2>
+                  <p>5100m</p>
+                </div>
+              </div>
+              <div class="species grenadier">
+                <img src="https://drive.google.com/thumbnail?id=1A_Ex-WmSCJEJTSQOD-GJNTiXtJ9SnIGY&sz=w1000">
+                <div class="description">
+                  <h2>Grenadier</h2>
+                  <p>7000m</p>
+                </div>
+              </div>
+              <div class="species dumbo-octopus">
+                <img src="https://drive.google.com/thumbnail?id=1VI4Tx9veEiDqL-XrrtuHoevDTwiDj4v0&sz=w1000">
+                <div class="description">
+                  <h2>Dumbo Octopus</h2>
+                  <p>7000m</p>
+                </div>
+              </div>
+              <div class="species comb-jelly">
+                <img src="https://drive.google.com/thumbnail?id=1621lwws-oHXXjD6g9aB50hNOomyjkceI&sz=w1000">
+                <div class="description">
+                  <h2>Comb Jelly</h2>
+                  <p>7210m</p>
+                </div>
+              </div>
+              <div class="species hadal-snailfish">
+                <img src="https://drive.google.com/thumbnail?id=1EMoN5woTf0cBul3Gr1uQfNu6QOo_Gmjw&sz=w1000">
+                <div class="description">
+                  <h2>Hadal Snailfish</h2>
+                  <p>8100m</p>
+                </div>
+              </div>
+              <div class="species sea-pig">
+                <img src="https://drive.google.com/thumbnail?id=1nMBs6pWasPlfzH_69iyqZOcbjoB1lXtE&sz=w1000">
+                <div class="description">
+                  <h2>Sea Pig</h2>
+                  <p>10 000m</p>
+                </div>
+              </div>
+              <div class="species alicella">
+                <img src="https://drive.google.com/thumbnail?id=1lSahE2dMVzxEsSVIZiMn43lc22dNsmE-&sz=w1000">
+                <div class="description">
+                  <h2>Alicella</h2>
+                  <p>10 300m</p>
+                </div>
+              </div>
+              <div class="species deepsea">
+                <img src="https://drive.google.com/thumbnail?id=1qKyARbM8fb3XSqAtrC2AOzqU2pf5-lIR&sz=w1000">
+                <div class="description">
+                  <h2>Deepsea Challenger</h2>
+                  <p>10 898m</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="end">
+      <div class="main-title row d-flex justify-content-center align-items-center">
+        <div class="col-12">
+          <div class="d-flex justify-content-center">
+            <h1>Thanks</h1>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="d-flex justify-content-center">
+            <span>Credits:</span>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="d-flex justify-content-center">
+            <span>Beach: <a href="https://freepik.com">Freepik</a> / Items: <a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia</a></span>
+          </div>
+        </div>
+        <div class="col-12 mt-5">
+          <div class="d-flex justify-content-center">
+            <div class="mouse-scroll">
+              <div class="mouse">
+                <div class="wheel"></div>
+              </div>
+              <div class="arrow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="measures">
+      <div id="distance">
+        Depth: 0m
+      </div>
+      <div id="pressure">Pressure: 101325 Pa</div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+	getDistanceAndPressure();
+	$(window).scroll(function () {
+		getDistanceAndPressure();
+	});
+});
+
+function depthToPressure(depth) {
+	const gravity = 9.81; // Acceleration due to gravity in m/s^2
+	const density = 1025; // Average density of seawater in kg/m^3
+	const atmosphericPressure = 101325; // Atmospheric pressure at sea level in Pascals
+
+	let pressure = (density * gravity * depth + atmosphericPressure) / 100000;
+
+	return pressure;
+}
+
+function getDistanceAndPressure() {
+	var imageTop = $("#image").offset().top;
+	var scrollPosition = $(window).scrollTop();
+	var distance = scrollPosition - imageTop;
+
+	distance = Math.max(0, Math.round(distance, 11000));
+
+	$("#distance").text("Depth: " + distance + " m");
+
+	var newPosition = imageTop + distance - scrollPosition;
+
+	$("#distance").css("top", newPosition + "px");
+
+	let pressure = depthToPressure(distance);
+	$("#pressure").text("Pressure: " + Math.round(pressure) + " Bars");
+}
+
+$("#showAll").on("click", function () {
+	$(".species").addClass("active");
+	$(".elements").hide();
+	$(".showAll").hide();
+	$(".hideAll").show();
+});
+
+$("#hideAll").on("click", function () {
+	$(".species").removeClass("active");
+	$(".elements").show();
+	$(".showAll").show();
+	$(".hideAll").hide();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+	const titlesElements = document.querySelectorAll(".titles");
+
+	// Create an intersection titlesobserver
+	let titlesobserver = new IntersectionObserver(
+		(entries, titlesobserver) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("active");
+					// Stop observing the element once it becomes visible
+					titlesobserver.unobserve(entry.target);
+				}
+			});
+		},
+		{
+			threshold: 0.1 // Trigger when 10% of the element is visible
+		}
+	);
+
+	// Observe each .titles element
+	titlesElements.forEach((titles) => {
+		titlesobserver.observe(titles);
+	});
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+	var speciesElements = document.querySelectorAll(".species");
+	var elementsNumber = document.getElementById("elementsNumber");
+	var speciesCount = 0;
+
+	function updateSpeciesCount() {
+		speciesCount = document.querySelectorAll(".species.visible").length;
+		document.getElementById("elementsNumber").textContent = speciesCount;
+	}
+
+	speciesElements.forEach(function (element) {
+		element.addEventListener("mouseenter", function () {
+			if (!element.classList.contains("visible")) {
+				element.classList.add("visible");
+				updateSpeciesCount();
+			}
+		});
+	});
+
+	// Function to check if an element is in the viewport
+	function isElementInViewport(el) {
+		var rect = el.getBoundingClientRect();
+		return (
+			rect.top >= 0 &&
+			rect.left >= 0 &&
+			rect.bottom <=
+				(window.innerHeight || document.documentElement.clientHeight) &&
+			rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+		);
+	}
+});
+
+let lastX = 0;
+document.addEventListener("mousemove", function (e) {
+	const currentX = e.clientX;
+	const direction = currentX > lastX ? "right" : "left";
+	lastX = currentX;
+
+	const deepCursorRight =
+		"url(https://drive.google.com/thumbnail?id=14ZwyOC0zZQLJwVVwNjAo-m4F7E44-bV5&sz=w96) 48 48, auto";
+	const deepCursorLeft =
+		"url(https://drive.google.com/thumbnail?id=10YhiKqpHFCt7N84wPOdLOGF4emd6JP6l&sz=w96) 48 48, auto";
+	const speciesCursorRight =
+		"url(https://drive.google.com/thumbnail?id=1zg6mXLnh_Tm472WTTp7wk3hTDQKV9UF8&sz=w96) 48 48, auto";
+	const speciesCursorLeft =
+		"url(https://drive.google.com/thumbnail?id=10xq6gcbC3EjEYwEOzqcTPqgQXq9ifEfV&sz=w96) 48 48, auto";
+
+	const deepElements = document.querySelectorAll(".deep");
+	const speciessElements = document.querySelectorAll(".species img");
+
+	deepElements.forEach((el) => {
+		el.style.cursor = direction === "right" ? deepCursorRight : deepCursorLeft;
+	});
+
+	speciesElements.forEach((el) => {
+		el.style.cursor =
+			direction === "right" ? speciesCursorRight : speciesCursorLeft;
+	});
+});
+
+  </script>
+</body>
+</html>s
