@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRRI High School</title>
+  <link rel="shortcut icon" href="school logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="script.js">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- lun dev code -->
+
+  <!-- The top contact list start -->
+
+  <div class="top-navbar">
+    <div class="email">
+      <i class='bx bxs-envelope'></i>
+
+      <a href="mailto:example@example.com">example@example.com</a>
+    </div>
+    <div class="phone">
+      <i class='bx bxs-phone-call'></i>
+
+      <a href="tel:+1234567890">Call: +1 (234) 567-890</a>
+    </div>
+  </div>
+
+
+  <!-- The top contact list End -->
+
+
+
+
+
+
+
+  <!-- the main navbar starts -->
+  <div class="main-navbar-section-all">
+
+
+
+    <div class="main-navbar-section">
+
+      <div class="logo">
+        <div class="logo-img">
+
+          <img src="school logo.jpg" alt="">
+
+        </div>
+        <div class="logo-txt-xyz">
+          <h1>Bangladesh Rice Research Institute </h1>
+          <h3>(BRRI) High School</h3>
+        </div>
+      </div>
+
+      <div class="admission-in-option">
+        <div class="admissin-btn">
+          <button class="admissin-btn2">
+            <div class="admission-txt">
+              ADMISSION
+            </div>
+            <div class="admission-logo">
+              <i class='bx bxs-user-pin'></i>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="log-in-option">
+        <div class="log-in-btn">
+          <button class="log-in-btn2">
+            <div class="log-in-txt">
+              LOG IN
+            </div>
+            <div class="log-in-logo">
+              <i class='bx bxs-user-circle'></i>
+
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="menu-option">
+        <div class="menu-btn">
+          <div class="menu-btn2 " onclick="toggleMenu()">
+            <div class="menu-txt">
+              MENU
+            </div>
+            <div class="menu-logo hamburger ">
+              <i class='bx bx-menu-alt-right'></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu" id="menu">
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+
+        <a href="">
+          <div class="menu-home-all menu-home-all" id="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-home' style='color:#fffefe'></i></a>
+            </div>
+            <div class="menu-home-txt menu-home" id="menu-home">
+              Home
+            </div>
+          </div>
+        </a>
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-user-circle' style="color: #fffefe;"></i></a>
+            </div>
+            <div class="menu-home-txt" id="menu-about">
+              About Us
+            </div>
+          </div>
+        </a>
+
+
+        <a href="">
+          <div class="menu-home-all ">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-info-circle' style='color:#fffefe'></i></a>
+            </div>
+            <div class="menu-home-txt  academic-info-all clickable-text" onclick="toggleBox()">
+              Academic Info ▼
+
+            </div>
+
+          </div>
+        </a>
+
+        <div id="myBox" class="box academic-info-option">
+
+          <a href="#" role="menuitem">Home</a>
+          <a href="#" role="menuitem">Profile</a>
+          <a href="#" role="menuitem">Settings</a>
+          <a href="#" role="menuitem">Logout</a>
+        </div>
+
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class><i class='bx bxs-registered'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Result
+            </div>
+          </div>
+        </a>
+
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bx-vertical-bottom'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Download
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bx-vertical-bottom'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Download
+            </div>
+          </div>
+        </a>
+
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-contact'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Contact
+            </div>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="menu-home-all ">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-info-circle' style='color:#fffefe'></i></a>
+            </div>
+            <div class="menu-home-txt  academic-info-all clickable-text" onclick="toggleBox()">
+              Academic Info ▼
+
+            </div>
+
+          </div>
+        </a>
+
+        <div id="myBox" class="box academic-info-option">
+
+          <a href="#" role="menuitem">Home</a>
+          <a href="#" role="menuitem">Profile</a>
+          <a href="#" role="menuitem">Settings</a>
+          <a href="#" role="menuitem">Logout</a>
+        </div>
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-user-circle' style="color: #fffefe;"></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Log In
+            </div>
+          </div>
+        </a>
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bx-vertical-bottom'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Download
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bx-vertical-bottom'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Download
+            </div>
+          </div>
+        </a>
+
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-contact'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Contact
+            </div>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="menu-home-all ">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-info-circle' style='color:#fffefe'></i></a>
+            </div>
+            <div class="menu-home-txt  academic-info-all clickable-text" onclick="toggleBox()">
+              Academic Info ▼
+
+            </div>
+
+          </div>
+        </a>
+
+      </div>
+
+
+
+    </div>
+
+
+
+    <div class="mobile-admission-log-in">
+
+      <div class="admission-in-option2">
+        <div class="admissin-btn">
+          <button class="admissin-btn2">
+            <div class="admission-txt">
+              ADMISSION
+            </div>
+            <div class="admission-logo">
+              <i class='bx bxs-user-pin'></i>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="log-in-option2">
+        <div class="log-in-btn">
+          <button class="log-in-btn2">
+            <div class="log-in-txt">
+              LOG IN
+            </div>
+            <div class="log-in-logo">
+              <i class='bx bxs-user-circle'></i>
+
+            </div>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- the main navbar Ends -->
+
+
+  <!-- The sub-header starts -->
+
+  <div class="sub-header">
+    <h1>#About Us</h1>
+    <div class="sub-header-title-line">
+
+    </div>
+  </div>
+
+
+
+  <!-- The sub-header ends -->
+
+  <!-- The loation of the page starts -->
+
+  <div class="location-page-section">
+    <div class="location-page-txt">
+      <a href="">Home <span>/</span></a>
+      <a href="">About Us</a>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- The location of the page ends -->
+
+
+
+  <!-- About main section starts -->
+
+  <!-- <div class="about-main-section-all">
+    <div class="about-main-section">
+      <div class="about-left-bars-all">
+        <div class="about-left-bars-title">
+          <h1>About Us</h1>
+        </div>
+        <div class="about-left-bars">
+          <div class="about-bar">
+            <h2>Campuss</h2>
+          </div>
+        </div>
+        <div class="about-left-bars">
+          <div class="about-bar">
+            <h2>History</h2>
+          </div>
+        </div>
+        <div class="about-left-bars">
+          <div class="about-bar">
+            <h2>Teacher's Massage</h2>
+          </div>
+        </div>
+        <div class="about-left-bars">
+          <div class="about-bar">
+            <h2>Others</h2>
+          </div>
+        </div>
+        <div class="about-left-bars">
+          <div class="about-bar">
+            <h2>Campuss</h2>
+          </div>
+        </div>
+      </div>
+      <div class="About-section-txt-img">
+        <div class="about-sectoin-img">
+          <img src="pexels-yogendras31-3231359.jpg" alt="">
+        </div>
+        <div class="about-section-txt">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nemo esse praesentium possimus. Architecto
+            minima saepe repudiandae porro eligendi, tempora cupiditate nisi a officia consequuntur? Ullam a iure quas
+            tenetur beatae nam, distinctio est libero fugiat voluptatem ratione, vitae, consequuntur vero accusamus
+            molestiae? Aperiam assumenda vitae voluptatem ducimus ullam est laudantium, eius quibusdam esse quam quis
+            temporibus quia voluptas corrupti aut nemo ipsa ut officiis doloremque dolores, ab reiciendis sint officia?
+            Nostrum dicta, voluptatem natus cupiditate atque pariatur delectus veniam totam reiciendis molestias harum
+            odio eligendi voluptate at ullam maiores! Placeat inventore repellendus voluptas beatae expedita possimus
+            quos dolorem voluptatibus quo ducimus atque, blanditiis rem hic id quasi similique! Voluptates atque placeat
+            porro, ut blanditiis dolor doloribus aut sit illo impedit! Magnam esse, cupiditate similique architecto
+            officia aperiam tempora assumenda dolorum? Amet aspernatur sapiente voluptatem voluptatibus est id hic
+            assumenda aliquid. Soluta, harum suscipit. Nemo nostrum veritatis, at perspiciatis, quam ab corrupti,
+            deserunt omnis quas libero possimus. Odit earum dicta ex expedita blanditiis ut error voluptatum! Animi quo,
+            asperiores officia reiciendis voluptates impedit eaque quia neque nemo quasi atque blanditiis suscipit
+            molestiae non mollitia? Perferendis obcaecati numquam quo illum doloribus temporibus? Ut nihil officia quod
+            architecto reprehenderit minima omnis optio, repellendus tempora, maxime quo, id magnam esse soluta dolorem
+            recusandae? Quae porro itaque deleniti ex inventore voluptate doloribus ea vel voluptatibus cupiditate
+            nihil, nostrum, harum mollitia temporibus accusamus omnis. Deserunt officia explicabo asperiores eveniet
+            vero odio accusamus quibusdam, possimus, veniam et ad rem modi iste quis aliquam nemo provident, ea
+            obcaecati neque commodi tempore deleniti at? Nostrum, iusto. Quisquam magnam maxime laudantium magni dolore
+            sunt tempore, dolores praesentium minus, quae, id iste excepturi error incidunt possimus sint omnis non
+            sequi nam porro vitae! Commodi quidem voluptas vel? Consequuntur reprehenderit soluta voluptas inventore
+            odio obcaecati vitae animi architecto, sunt molestiae dolores!</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+  <div class="container-about">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="nav-section">
+        <h2>About Us</h2>
+        <a href="#">OverAll</a>
+        <a href="#">Headmaster’s Message</a>
+        <a href="#">Mission And Vision</a>
+        <a href="#">Origins And History</a>
+        <a href="#">Why Doon?</a>
+        <a href="#">Around Campus</a>
+      </div>
+      <div class="news">
+        <h2>News Categories</h2>
+        <a href="#">All</a>
+        <a href="#">Academic</a>
+        <a href="#">Alumni</a>
+        <a href="#">Clubs And Societies</a>
+        <a href="#">Co-Curricular</a>
+        <a href="#">Events</a>
+        <a href="#">Media</a>
+        <a href="#">Sport</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <h1>Know Details</h1>
+      <div class="about-line">
+
+      </div>
+      <div class="intro">
+        <p>Welcome to The brri School. We are a school which specializes in all boys boarding education for pupils aged
+          12-18. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse sed, magni eius, officiis mollitia, nisi
+          asperiores nobis aliquam maxime nesciunt autem odit assumenda facilis fuga saepe deleniti. Nesciunt quam fuga
+          et optio labore odio. Odio autem inventore earum reiciendis doloremque sapiente eius doloribus culpa impedit,
+          atque voluptas nihil mollitia exercitationem non delectus provident ad harum deleniti recusandae nam neque
+          quasi. A laboriosam dolorum quia qui eaque architecto hic iure, at accusantium fuga libero laudantium rerum
+          dicta animi optio repellendus ratione eligendi ad provident, temporibus, nobis incidunt explicabo? Et rem quo
+          at doloremque, hic iure pariatur Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid aut in
+          culpa dolorum. Molestiae, repellat a. Voluptate obcaecati qui perspiciatis illum nam officiis non, est,
+          provident cum voluptatibus ipsum velit delectus at laudantium ab in. Excepturi dolores atque eligendi,
+          architecto nulla itaque id dolor reiciendis mollitia quaerat iure quibusdam necessitatibus et ducimus
+          dignissimos perspiciatis enim dolore libero explicabo, laudantium velit! Adipisci voluptate, perspiciatis eius
+          corporis distinctio numquam illum mollitia quo nobis recusandae similique minus nemo ea sit, eveniet
+          perferendis maiores? Officiis magni a ad vero corrupti magnam consectetur minima numquam odio nam! Suscipit
+          perspiciatis voluptates facilis asperiores nisi eius autem expedita inventore! Quibusdam, aperiam repellendus.
+          Odit, vero nemo similique corporis nihil ratione expedita sed quo? Ad ratione ducimus assumenda doloribus
+          earum omnis, nisi fuga ipsa voluptatem maxime natus repellat distinctio! Reiciendis vitae ab rerum, obcaecati
+          suscipit magnam voluptatem, atque laudantium repellendus sint eligendi a at sit reprehenderit! Iusto fugiat
+          amet repellat dolores quas odit iure eos et, blanditiis, sit quis quos! Unde magnam tempora eaque quis
+          molestias reiciendis quas amet eveniet adipisci, ratione eum fugit vel sapiente ipsam pariatur debitis
+          doloribus similique provident iusto nihil dicta odit suscipit animi! Placeat, beatae? Quidem aspernatur
+          officia asperiores a. Eveniet suscipit natus, temporibus recusandae expedita praesentium labore veritatis ad
+          autem quidem! Architecto similique libero excepturi voluptate? Commodi veniam assumenda enim, harum adipisci
+          modi. Voluptates at, dignissimos sit possimus iure quisquam maxime alias vel repellendus hic quia earum
+          corporis aperiam totam nulla sequi harum veritatis ad! Reiciendis quo quis accusamus. Repellendus quidem vel
+          voluptatum non aut. Minima odit nisi asperiores excepturi minus non possimus corporis. Non amet sequi dicta
+          fuga libero eius dolorem, consectetur, voluptate, ea optio enim inventore earum incidunt minus accusantium.
+          Doloribus, eveniet ipsam saepe totam ut voluptatibus nam maxime, rem blanditiis eaque inventore numquam eos
+          sed. Ipsa debitis incidunt voluptates asperiores. ipsam voluptatem doloribus animi facilis corrupti quod
+          consectetur voluptate
+          sit accusantium! Quod ex ea sint maiores alias aliquid maxime recusandae, nobis dolorem magni quis impedit
+          consequatur nisi eius libero laboriosam unde officia eos quaerat similique reiciendis tempora. Nemo, enim
+          quaerat! Rerum, dolorem inventore! Non autem repellat, ea ex libero quae ratione labore ut officiis deleniti,
+          asperiores accusantium. Pariatur provident nobis nostrum rem maxime. Velit, recusandae. Necessitatibus
+          doloremque accusamus deserunt repudiandae nobis quidem reiciendis libero reprehenderit recusandae ipsum,
+          minima minus eos dolor tenetur nesciunt dicta enim saepe iste vero laboriosam numquam natus suscipit expedita
+          ipsa? Et consequatur saepe molestias laudantium praesentium dicta perferendis earum, dolores facere!</p>
+        <p>Established in 1935, The Doon School is one of India’s finest schools...</p>
+      </div>
+
+      <div class="grid">
+        <div class="card-about"><i>🎤</i>Headmaster’s Message</div>
+        <div class="card-about yellow"><i>📨</i>Mission and Vision</div>
+        <div class="card-about"><i>ℹ️</i>Origins and History</div>
+        <div class="card-about"><i>🏆</i>Why Doon?</div>
+        <div class="card-about"><i>👨‍🏫</i>Teaching Staff</div>
+        <div class="card-about"><i>🏫</i>Facilities</div>
+        <div class="card-about"><i>A-Z</i>School Policies</div>
+        <div class="card-about"><i>🏛️</i>Governance</div>
+        <div class="card-about"><i>👥</i>Administrative Staff</div>
+        <div class="card-about"><i>🏨</i>Places to stay in Dehradun</div>
+        <div class="card-about"><i>👁️</i>Jobs at Doon</div>
+        <div class="card-about"><i>🏡</i>Around Campus</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- About main sectn ends -->
+
+
+
+
+
+
+  <!-- Footer starts -->
+
+
+  <footer>
+    <div class="all-footer">
+      <div class="container4">
+        <div class="about-footer">
+          <img src="school logo.jpg" alt="">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, velit hic repellat veniam vitae neque
+            nostrum
+            quod quidem optio cumque.</p>
+        </div>
+        <div class="nav-links-footer">
+          <h2 class="nav-links-tittle "><span>Our Links</span></h2>
+          <h5>Home</h5>
+          <h5>About Us</h5>
+          <h5>Services</h5>
+          <h5>Projects</h5>
+          <h5>News</h5>
+          <h5>Contact Us</h5>
+        </div>
+        <div class="servises-footer">
+          <h2 class="nav-links-tittle "><span>Our Servises</span></h2>
+          <h5>2D/3D Layouts</h5>
+          <h5>Retail Desings</h5>
+          <h5>Interiour Desings</h5>
+          <h5>2D/3D Layouts</h5>
+          <h5>Retail Desings</h5>
+          <h5>Interiour Desings</h5>
+        </div>
+        <div class="newssletter">
+          <h2 class="nav-links-tittle "><span>Newssletter</span></h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="links-footer">
+            <a href=""> <i class='bx bxl-facebook icon-hover-fill icon-1'></i></a>
+            <a href=""> <i class='bx bxl-instagram icon-hover-fill icon-2'></i></a>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="details-footer">
+        <div class="call-footer">
+          <div class="call-icon">
+            <img src="img18.webp" alt="">
+          </div>
+          <div class="call-txt">
+            <h2>Call Us Now</h2>
+            <p>+880 17177 34248</p>
+          </div>
+        </div>
+        <div class="email-footer">
+          <div class="email-icon">
+            <img src="img19.webp" alt="">
+          </div>
+          <div class="email-txt">
+            <h2>Email Address</h2>
+            <p>txtail1234@gmail.com</p>
+          </div>
+        </div>
+        <div class="location-footer">
+          <div class="location-icon">
+            <img src="img20.webp" alt="">
+          </div>
+          <div class="location-txt">
+            <h2>Location</h2>
+            <p>B/3 BARI,Gazipur</p>
+          </div>
+        </div>
+      </div>
+      <div class="last-txt">
+        <h4>Developed by <a target="_blank" href="https://www.facebook.com/">Mohammad Safwan</a> from <a href="">MSMS
+            Tech Ld.</a></h4>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+  <!-- Footer ends -->
+
+
+
+  <!-- Js starts -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="script.js"></script>
+
+  <!-- Js ends -->
+</body>
+
+</html>

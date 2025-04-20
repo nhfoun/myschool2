@@ -313,22 +313,7 @@
   background-color: #0c174b;
   transition: 1s;
 }
-/* .menu-home-all::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  overflow-x: hidden;
-  right: -100%;
-  width: 80%;
-  height: 100%;
-  background-color: rgb(212, 212, 28);
-  transition: right 0.5s ease;
-  z-index: 0;
-}
 
-.menu-home-all:hover::before{
-  right: 0;
-} */
 
 .menu-home-txt{
   position: relative;
@@ -1265,7 +1250,7 @@
     display: block;
 }
 
-span:nth-child(1) {
+.button1 span:nth-child(1) {
     top: 0;
     left: 0;
     width: 100%;
@@ -2536,3 +2521,201 @@ canvas {
  
 
 /* footer End */
+
+
+
+/* About section page starts */
+
+
+.sub-header{
+  background-image: url(ed-us-uHPfTGy-Lto-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+}
+
+.sub-header h1{
+  text-align: center;
+  padding-top: 10%;
+  color: RGB(16, 24, 57);
+  font-weight: 900;
+  font-size: 45px;
+}
+
+.sub-header-title-line{
+  height: 170px;
+  width: 3px;
+  transform: rotateY('180deg');
+  background-color: #aa0909;
+  margin-left: 50%;
+  z-index: 999;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+
+.location-page-section{
+  background-color: RGB(16, 24, 57);
+  z-index: 000;
+  position: relative;
+}
+.location-page-txt{
+  padding-left: 40px;
+  padding: 10px;
+}
+.location-page-txt span{
+  padding-left: 10px;
+}
+.location-page-txt a{
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+
+
+@media (max-width:900px){
+.sub-header h1{
+  padding-top: 15%;
+}
+
+}
+@media (max-width:550px){
+  .sub-header h1{
+    padding-top: 25%;
+  }
+  
+  }
+  @media (max-width:400px){
+    .sub-header h1{
+      padding-top: 30%;
+    }
+    .sub-header-title-line{
+      height: 140px;
+    }
+    }
+
+
+    .container-about {
+      display: flex;
+      padding: 20px;
+      width: 100%;
+    }
+    .sidebar {
+      width: 250px;
+      margin-right: 20px;
+      margin-top: 100px;
+    }
+    .sidebar h2, .news h2 {
+      background-color: #aa0909;
+      padding: 10px;
+      font-size: 20px;
+    }
+    .nav-section, .news {
+      background-color: RGB(16, 24, 57);
+      color: white;
+      margin-bottom: 20px;
+    }
+    .nav-section a, .news a {
+      display: block;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      border-top: 1px solid #ccc;
+    }
+    .nav-section a:hover, .news a:hover {
+      background-color: #003366;
+    }
+    .content {
+      flex: 1;
+    }
+    .content h1 {
+      text-align: center;
+      font-size: 38px;
+      display: inline-block;
+      margin-left: 30%;
+      padding-bottom: 5px;
+    }
+    .about-line{
+      width: 10px;
+      height: 2px;
+      background-color: #aa0909;
+      margin-left: 37%;
+      padding-left: 50px;
+      margin-bottom: 50px;
+      align-items: center;
+    }
+    .intro {
+      margin-bottom: 20px;
+    }
+    .intro p{
+      font-size: 18px;
+      color:#1a1919;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .card-about {
+      background-color: RGB(16, 24, 57);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .card-about.yellow {
+      background-color: #aa0909;
+      color: #000;
+    }
+    .card-about i {
+      font-size: 24px;
+      display: block;
+      margin-bottom: 10px;
+    }
+/* About section page ends */
+
+
+/* about-massag-starts */
+
+.massage-about-us-all{
+  padding-left: 5%;
+  width: 80%;
+}
+
+
+.massage-about-card{
+  display: flex;
+}
+
+.massage-about-img img{
+  width: 300px;
+  height: 300px;
+  margin: 130px 30px 20px 10px;
+}
+.massages-txts p{
+  font-size: 15px;
+  color: #0a0f4e;
+  line-height: 1.5;
+}
+.massage-quotes{
+  font-size: 150px;
+  color: #aa0909;
+  
+ 
+}
+.massage-about-title-one{
+  font-size:20px;
+  font-weight: 900;
+  color: RGB(16, 24, 57);
+  margin-left: 23%;
+  
+}
+.massage-about-line{
+  width: 60px;
+  height: 2px;
+  background-color: #aa0909;
+  margin-left: 30%;
+  margin-top: 4px;
+}
+
+/* about-massage-ends */

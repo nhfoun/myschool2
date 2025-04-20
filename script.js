@@ -1,3 +1,6 @@
+// slider starts
+
+
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
@@ -61,10 +64,10 @@ thumbnails.forEach((thumbnail, index) => {
 })
 
 
+// slider ends
 
 
-
-
+// menu starts
 
 function toggleMenu() {
     document.getElementById('menu').classList.toggle('active');
@@ -72,9 +75,11 @@ function toggleMenu() {
   }
 
 
+// menu ends
 
 
 
+// bg coming starts
   
 
 function toggleBox() {
@@ -84,7 +89,11 @@ function toggleBox() {
 
 
 
+// bg coming ends
 
+
+
+// hello making starts
 
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
@@ -206,4 +215,18 @@ function coordsToI(x,y,w) {
 setInterval(loop,50);
 init();
 
-   
+// hello making ends
+
+
+
+
+
+
+let menuHome = document.querySelectorAll('.menu-home');
+let menuAbout = document.querySelectorAll('.menu-about');
+let menuHomeAll = document.querySelectorAll('.menu-home-all');
+
+menuHomeAll .addEventListener('click',()=>{
+  menuHome.style.backgroundColor = "#0c164b75"
+//  menuHome.style.display = "none"
+})
