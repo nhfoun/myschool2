@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+a{
+  text-decoration: none;
+}
 
 /* <!-- The top contact list Start --> */
 .top-navbar {
@@ -533,7 +535,7 @@
 .announcement-text {
   display: inline-block;
   padding-left: 100%;
-  animation: scroll 28s linear infinite ;
+  animation: scroll 38s linear infinite ;
   
 }
 
@@ -545,7 +547,9 @@
       transform: translateX(-100%);
   }
 }
-
+.announcement-board:hover{
+  animation-play-state: paused;
+}
 .announcement-text:hover{
   animation-play-state: paused;
 }
@@ -1669,13 +1673,12 @@ scrollbar-color: #0c174b #f0f2f5;
   border-top-right-radius: 8px;
 }
 
-.card p, .card li {
+.card li , .card p {
   font-size: 14px;
-  color: #333;
+  color: #0a0f4e;
   margin-bottom: 10px;
   padding-top: 15px;
 }
-
 .event {
   display: flex;
   align-items: flex-start;
@@ -1702,10 +1705,13 @@ scrollbar-color: #0c174b #f0f2f5;
   text-transform: uppercase;
 }
 
-ul {
+.card xl {
   padding-left: 18px;
+  text-decoration: none;
 }
-
+.bxs-circle{
+  padding-right: 10px;
+}
 @media (max-width: 768px) {
   .notice-container {
     flex-direction: column;
@@ -2741,7 +2747,7 @@ canvas {
 }
 }
 /* about-massage-ends */
-
+/* CAmpus gallery starts */
 .all-campus{
   width: 80%;
   background: none;
@@ -2822,3 +2828,152 @@ canvas {
     font-size: 2.2vh;
   }
 }
+/* CAmpus gallery ends */
+
+
+/* Vacation page starts */
+
+
+.vacataion-notice-section{
+  width: 80%;
+}
+
+.vacation-title{
+  font-size: 22px;
+  margin-left: 27%;
+  color: RGB(16, 24, 57);
+}
+
+.vacation-title-line{
+  width: 50px;
+  height: 2px;
+  background-color: #aa0909;
+  margin-left: 10%;
+}
+
+
+.tag-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+  gap: 30px;
+  scrollbar-width: none; /* for Firefox */
+  margin: 50px auto 50px 18%;
+}
+
+.tag-container::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, Edge */
+}
+
+.tag-button {
+  padding: 10px 20px;
+  border: 1px solid RGB(16, 24, 57);
+  border-radius: 20px;
+  background-color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+}
+
+.tag-button:hover {
+  background-color: #f0f0f0;
+  transition-duration: 1s;
+}
+
+.dates-card{
+  width: 80px;
+  height: 70px;
+  background-color: #aa0909;
+  padding: 20px 10px;
+  color: #cbcedf;
+  font-weight: 700;
+}
+
+.up-notice-card{
+  display: flex;
+}
+.notice-title {
+  margin-left: 22%;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.notice-title h2{
+  font-size: 27px;
+  
+}
+.notice-card{
+  background-color: RGB(16, 24, 57);
+  margin: 50px;
+ 
+}
+.notice-card-txt{
+  padding: 20px;
+}
+.notice-card-txt p{
+  color: #d1d6df;
+}
+
+
+.events-title-line{
+  width: 100px;
+  height: 2px;
+  background-color: #aa0909;
+  margin-left: 12%;
+}
+
+.events-title{
+  font-size: 20px;
+  margin-left: 25%;
+  color: RGB(16, 24, 57);
+}
+
+@media (max-width:600px){
+  .vacataion-notice-section{
+    width: 100%;
+  }
+  
+  .tag-container {
+    padding: 6px 12px;
+    gap: 5px;
+    margin: 10px 0 0px 0%;
+  }  
+
+  
+  .up-notice-card{
+    display: block;
+  }
+  .notice-title {
+    margin-left: 5%;
+  }
+  
+  
+  .notice-card{
+    margin: 10px;
+   
+  }
+  .notice-card-txt{
+    padding: 20px;
+  }
+  
+  
+  .events-title-line{
+    width: 100px;
+    height: 2px;
+    background-color: #aa0909;
+    margin-left: 12%;
+  }
+  
+  .events-title{
+    font-size: 20px;
+    margin-left: 25%;
+    color: RGB(16, 24, 57);
+  }
+  
+}
+
+
+
+/* Vacation page ends */

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRRI High School</title>
+  <link rel="shortcut icon" href="school logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="script.js">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="teaher.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+  @media (max-width:900px) {
+    .container-about {
+      flex-direction: column-reverse;
+    }
+
+    .massage-about-us-all {
+      padding-left: 1%;
+      width: 100%;
+    }
+
+
+    .massage-about-card {
+      display: grid;
+    }
+
+    .massage-about-img img {
+      margin: 130px 30px 20px 150px;
+    }
+
+    .massage-about-title-one {
+      margin-left: 3%;
+
+    }
+
+    .massage-about-line {
+      margin-left: 3%;
+    }
+  }
+
+  @media (max-width:900px) {
+    .massage-about-img img {
+      margin: 130px 30px 20px 10px;
+    }
+
+
+  }
+</style>
+
+<body>
+  <!-- lun dev code -->
+
+  <!-- The top contact list start -->
+
+  <div class="top-navbar">
+    <div class="email">
+      <i class='bx bxs-envelope'></i>
+
+      <a href="mailto:example@example.com">example@example.com</a>
+    </div>
+    <div class="phone">
+      <i class='bx bxs-phone-call'></i>
+
+      <a href="tel:+1234567890">Call: +1 (234) 567-890</a>
+    </div>
+  </div>
+
+
+  <!-- The top contact list End -->
+
+
+
+
+
+
+
+  <!-- the main navbar starts -->
+  <div class="main-navbar-section-all">
+
+
+
+    <div class="main-navbar-section">
+
+      <div class="logo">
+        <div class="logo-img">
+
+          <img src="school logo.jpg" alt="">
+
+        </div>
+        <div class="logo-txt-xyz">
+          <h1>Bangladesh Rice Research Institute </h1>
+          <h3>(BRRI) High School</h3>
+        </div>
+      </div>
+
+      <div class="admission-in-option">
+        <div class="admissin-btn">
+          <button class="admissin-btn2">
+            <div class="admission-txt">
+              ADMISSION
+            </div>
+            <div class="admission-logo">
+              <i class='bx bxs-user-pin'></i>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="log-in-option">
+        <div class="log-in-btn">
+          <button class="log-in-btn2">
+            <div class="log-in-txt">
+              LOG IN
+            </div>
+            <div class="log-in-logo">
+              <i class='bx bxs-user-circle'></i>
+
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="menu-option">
+        <div class="menu-btn">
+          <div class="menu-btn2 " onclick="toggleMenu()">
+            <div class="menu-txt">
+              MENU
+            </div>
+            <div class="menu-logo hamburger ">
+              <i class='bx bx-menu-alt-right'></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu" id="menu">
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+
+        <a href="">
+          <div class="menu-home-all menu-home-all" id="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-home' style='color:#fffefe'></i></a>
+            </div>
+            <div class="menu-home-txt menu-home" id="menu-home">
+              Home
+            </div>
+          </div>
+        </a>
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-user-circle' style="color: #fffefe;"></i></a>
+            </div>
+            <div class="menu-home-txt" id="menu-about">
+              About Us
+            </div>
+          </div>
+        </a>
+
+
+        <a href="">
+          <div class="menu-home-all ">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-info-circle' style='color:#fffefe'></i></a>
+            </div>
+            <div class="menu-home-txt  academic-info-all clickable-text" onclick="toggleBox()">
+              Academic Info ▼
+
+            </div>
+
+          </div>
+        </a>
+
+        <div id="myBox" class="box academic-info-option">
+
+          <a href="#" role="menuitem">Home</a>
+          <a href="#" role="menuitem">Profile</a>
+          <a href="#" role="menuitem">Settings</a>
+          <a href="#" role="menuitem">Logout</a>
+        </div>
+
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class><i class='bx bxs-registered'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Result
+            </div>
+          </div>
+        </a>
+
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bx-vertical-bottom'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Download
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bx-vertical-bottom'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Download
+            </div>
+          </div>
+        </a>
+
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-contact'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Contact
+            </div>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="menu-home-all ">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-info-circle' style='color:#fffefe'></i></a>
+            </div>
+            <div class="menu-home-txt  academic-info-all clickable-text" onclick="toggleBox()">
+              Academic Info ▼
+
+            </div>
+
+          </div>
+        </a>
+
+        <div id="myBox" class="box academic-info-option">
+
+          <a href="#" role="menuitem">Home</a>
+          <a href="#" role="menuitem">Profile</a>
+          <a href="#" role="menuitem">Settings</a>
+          <a href="#" role="menuitem">Logout</a>
+        </div>
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-user-circle' style="color: #fffefe;"></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Log In
+            </div>
+          </div>
+        </a>
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bx-vertical-bottom'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Download
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bx-vertical-bottom'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Download
+            </div>
+          </div>
+        </a>
+
+
+
+        <a href="">
+          <div class="menu-home-all">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-contact'></i></a>
+            </div>
+            <div class="menu-home-txt">
+              Contact
+            </div>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="menu-home-all ">
+            <div class="menu-home-icon">
+              <a href="#" class=""><i class='bx bxs-info-circle' style='color:#fffefe'></i></a>
+            </div>
+            <div class="menu-home-txt  academic-info-all clickable-text" onclick="toggleBox()">
+              Academic Info ▼
+
+            </div>
+
+          </div>
+        </a>
+
+      </div>
+
+
+
+    </div>
+
+
+
+    <div class="mobile-admission-log-in">
+
+      <div class="admission-in-option2">
+        <div class="admissin-btn">
+          <button class="admissin-btn2">
+            <div class="admission-txt">
+              ADMISSION
+            </div>
+            <div class="admission-logo">
+              <i class='bx bxs-user-pin'></i>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="log-in-option2">
+        <div class="log-in-btn">
+          <button class="log-in-btn2">
+            <div class="log-in-txt">
+              LOG IN
+            </div>
+            <div class="log-in-logo">
+              <i class='bx bxs-user-circle'></i>
+
+            </div>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- the main navbar Ends -->
+
+
+  <!-- The sub-header starts -->
+
+  <div class="sub-header">
+    <h1>#About Us</h1>
+    <div class="sub-header-title-line">
+
+    </div>
+  </div>
+
+
+
+  <!-- The sub-header ends -->
+
+  <!-- The loation of the page starts -->
+
+  <div class="location-page-section">
+    <div class="location-page-txt">
+      <a href="">Home <span>/</span></a>
+      <a href="">Notice Board <span>/</span></a>
+        <a href="">Events</a>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- The location of the page ends -->
+
+
+
+
+
+
+  <div class="container-about">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="nav-section">
+        <h2>Notice Board</h2>
+        <a href="#">Leatest Vacations</a>
+        <a href="#">Upcoming Events</a>
+        <a href="#">News</a>
+      </div>
+      <div class="news">
+        <h2>News Categories</h2>
+        <a href="#">All</a>
+        <a href="#">Academic</a>
+        <a href="#">Clubs And Societies</a>
+        <a href="#">Co-Curricular</a>
+        <a href="#">Events</a>
+        <a href="#">Sport</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+
+    <!-- Vacations starts -->
+
+
+    <div class="vacataion-notice-section">
+      <div class="events-title">
+        <h1>Upcoming Events</h1>
+        <div class="events-title-line">
+
+        </div>
+      </div>
+
+      
+      <div class="notice-datails-all">
+        <div class="notice-card">
+          <div class="up-notice-card">
+            <div class="dates-card">
+              20 May 2025
+            </div>
+            <div class="notice-title">
+              <h2>The Eid-Ul-Fitar's Vacation</h2>
+            </div>
+          </div>
+          
+          <div class="notice-card-txt">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat libero doloribus quibusdam provident
+              perferendis soluta, pariatur minima temporibus fugiat odio beatae harum tempora aperiam ducimus esse ipsum
+              qui quo ad consequuntur commodi deserunt vero fuga. Repudiandae quos veniam maxime nostrum eveniet minima
+              voluptas ea placeat nisi. Quaerat nulla consequatur et dolorum tenetur eos magnam quidem quasi maxime
+              nisi, atque laudantium corporis? Adipisci expedita perferendis deserunt ipsum? Et, distinctio quod!
+              Corrupti optio quia, impedit saepe deserunt enim maiores ducimus laboriosam distinctio architecto tempora
+              sequi et repellendus? Quos qui inventore nam labore soluta nisi fugiat, in harum at accusantium illo
+              magnam sed.</p>
+          </div>
+        </div>
+        <div class="notice-card">
+          <div class="up-notice-card">
+            <div class="dates-card">
+              20 May 2025
+            </div>
+            <div class="notice-title">
+              <h2>The Eid-Ul-Fitar's Vacation</h2>
+            </div>
+          </div>
+          
+          <div class="notice-card-txt">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat libero doloribus quibusdam provident
+              perferendis soluta, pariatur minima temporibus fugiat odio beatae harum tempora aperiam ducimus esse ipsum
+              qui quo ad consequuntur commodi deserunt vero fuga. Repudiandae quos veniam maxime nostrum eveniet minima
+              voluptas ea placeat nisi. Quaerat nulla consequatur et dolorum tenetur eos magnam quidem quasi maxime
+              nisi, atque laudantium corporis? Adipisci expedita perferendis deserunt ipsum? Et, distinctio quod!
+              Corrupti optio quia, impedit saepe deserunt enim maiores ducimus laboriosam distinctio architecto tempora
+              sequi et repellendus? Quos qui inventore nam labore soluta nisi fugiat, in harum at accusantium illo
+              magnam sed.</p>
+          </div>
+        </div>
+        <div class="notice-card">
+          <div class="up-notice-card">
+            <div class="dates-card">
+              20 May 2025
+            </div>
+            <div class="notice-title">
+              <h2>The Eid-Ul-Fitar's Vacation</h2>
+            </div>
+          </div>
+          
+          <div class="notice-card-txt">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat libero doloribus quibusdam provident
+              perferendis soluta, pariatur minima temporibus fugiat odio beatae harum tempora aperiam ducimus esse ipsum
+              qui quo ad consequuntur commodi deserunt vero fuga. Repudiandae quos veniam maxime nostrum eveniet minima
+              voluptas ea placeat nisi. Quaerat nulla consequatur et dolorum tenetur eos magnam quidem quasi maxime
+              nisi, atque laudantium corporis? Adipisci expedita perferendis deserunt ipsum? Et, distinctio quod!
+              Corrupti optio quia, impedit saepe deserunt enim maiores ducimus laboriosam distinctio architecto tempora
+              sequi et repellendus? Quos qui inventore nam labore soluta nisi fugiat, in harum at accusantium illo
+              magnam sed.</p>
+          </div>
+        </div>
+        <div class="notice-card">
+          <div class="up-notice-card">
+            <div class="dates-card">
+              20 May 2025
+            </div>
+            <div class="notice-title">
+              <h2>The Eid-Ul-Fitar's Vacation</h2>
+            </div>
+          </div>
+          
+          <div class="notice-card-txt">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat libero doloribus quibusdam provident
+              perferendis soluta, pariatur minima temporibus fugiat odio beatae harum tempora aperiam ducimus esse ipsum
+              qui quo ad consequuntur commodi deserunt vero fuga. Repudiandae quos veniam maxime nostrum eveniet minima
+              voluptas ea placeat nisi. Quaerat nulla consequatur et dolorum tenetur eos magnam quidem quasi maxime
+              nisi, atque laudantium corporis? Adipisci expedita perferendis deserunt ipsum? Et, distinctio quod!
+              Corrupti optio quia, impedit saepe deserunt enim maiores ducimus laboriosam distinctio architecto tempora
+              sequi et repellendus? Quos qui inventore nam labore soluta nisi fugiat, in harum at accusantium illo
+              magnam sed.</p>
+          </div>
+        </div>
+        <div class="notice-card">
+          <div class="up-notice-card">
+            <div class="dates-card">
+              20 May 2025
+            </div>
+            <div class="notice-title">
+              <h2>The Eid-Ul-Fitar's Vacation</h2>
+            </div>
+          </div>
+          
+          <div class="notice-card-txt">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat libero doloribus quibusdam provident
+              perferendis soluta, pariatur minima temporibus fugiat odio beatae harum tempora aperiam ducimus esse ipsum
+              qui quo ad consequuntur commodi deserunt vero fuga. Repudiandae quos veniam maxime nostrum eveniet minima
+              voluptas ea placeat nisi. Quaerat nulla consequatur et dolorum tenetur eos magnam quidem quasi maxime
+              nisi, atque laudantium corporis? Adipisci expedita perferendis deserunt ipsum? Et, distinctio quod!
+              Corrupti optio quia, impedit saepe deserunt enim maiores ducimus laboriosam distinctio architecto tempora
+              sequi et repellendus? Quos qui inventore nam labore soluta nisi fugiat, in harum at accusantium illo
+              magnam sed.</p>
+          </div>
+        </div>
+        <div class="notice-card">
+          <div class="up-notice-card">
+            <div class="dates-card">
+              20 May 2025
+            </div>
+            <div class="notice-title">
+              <h2>The Eid-Ul-Fitar's Vacation</h2>
+            </div>
+          </div>
+          
+          <div class="notice-card-txt">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat libero doloribus quibusdam provident
+              perferendis soluta, pariatur minima temporibus fugiat odio beatae harum tempora aperiam ducimus esse ipsum
+              qui quo ad consequuntur commodi deserunt vero fuga. Repudiandae quos veniam maxime nostrum eveniet minima
+              voluptas ea placeat nisi. Quaerat nulla consequatur et dolorum tenetur eos magnam quidem quasi maxime
+              nisi, atque laudantium corporis? Adipisci expedita perferendis deserunt ipsum? Et, distinctio quod!
+              Corrupti optio quia, impedit saepe deserunt enim maiores ducimus laboriosam distinctio architecto tempora
+              sequi et repellendus? Quos qui inventore nam labore soluta nisi fugiat, in harum at accusantium illo
+              magnam sed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Vacations ends -->
+
+  </div>
+
+
+
+
+
+
+
+
+  <!-- Footer starts -->
+
+
+  <footer>
+    <div class="all-footer">
+      <div class="container4">
+        <div class="about-footer">
+          <img src="school logo.jpg" alt="">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, velit hic repellat veniam vitae neque
+            nostrum
+            quod quidem optio cumque.</p>
+        </div>
+        <div class="nav-links-footer">
+          <h2 class="nav-links-tittle "><span>Our Links</span></h2>
+          <h5>Home</h5>
+          <h5>About Us</h5>
+          <h5>Services</h5>
+          <h5>Projects</h5>
+          <h5>News</h5>
+          <h5>Contact Us</h5>
+        </div>
+        <div class="servises-footer">
+          <h2 class="nav-links-tittle "><span>Our Servises</span></h2>
+          <h5>2D/3D Layouts</h5>
+          <h5>Retail Desings</h5>
+          <h5>Interiour Desings</h5>
+          <h5>2D/3D Layouts</h5>
+          <h5>Retail Desings</h5>
+          <h5>Interiour Desings</h5>
+        </div>
+        <div class="newssletter">
+          <h2 class="nav-links-tittle "><span>Newssletter</span></h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="links-footer">
+            <a href=""> <i class='bx bxl-facebook icon-hover-fill icon-1'></i></a>
+            <a href=""> <i class='bx bxl-instagram icon-hover-fill icon-2'></i></a>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="details-footer">
+        <div class="call-footer">
+          <div class="call-icon">
+            <img src="img18.webp" alt="">
+          </div>
+          <div class="call-txt">
+            <h2>Call Us Now</h2>
+            <p>+880 17177 34248</p>
+          </div>
+        </div>
+        <div class="email-footer">
+          <div class="email-icon">
+            <img src="img19.webp" alt="">
+          </div>
+          <div class="email-txt">
+            <h2>Email Address</h2>
+            <p>txtail1234@gmail.com</p>
+          </div>
+        </div>
+        <div class="location-footer">
+          <div class="location-icon">
+            <img src="img20.webp" alt="">
+          </div>
+          <div class="location-txt">
+            <h2>Location</h2>
+            <p>B/3 BARI,Gazipur</p>
+          </div>
+        </div>
+      </div>
+      <div class="last-txt">
+        <h4>Developed by <a target="_blank" href="https://www.facebook.com/">Mohammad Safwan</a> from <a href="">MSMS
+            Tech Ld.</a></h4>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+  <!-- Footer ends -->
+
+
+
+  <!-- Js starts -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="script.js"></script>
+
+  <!-- Js ends -->
+</body>
+
+</html>
