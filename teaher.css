@@ -1,50 +1,34 @@
-
-<!-- teacher's say -->
-<div class="massage-about-us-all">
-  <div class="massage-about-card">
-    <div class="maage-about-img">
-      <img src="head sir pic.png" alt="">
-    </div>
-    <div class="massage-about-txt-section">
-      <div class="massage-quote-icon">
-        ❝
-      </div>
-      <div class="massage-about-txt">
-        <div class="message-title">Assi. Headmaster's Message</div>
-        <div class="test-title-line">
-
-        </div>
-        <div class="sub-quote">Education Is Not the Filling of a Pail, But the Lighting of a Fire.</div>
-        <div class="main massage-about-txt">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam atque repellat nemo necessitatibus
-            nobis, alias quae iste ipsa? Quod ex, blanditiis doloremque dolorum ut dolore dicta dolores sed totam
-            itaque voluptate beatae asperiores quis voluptas error fugit enim. Fuga unde et est nobis esse inventore
-            similique molestias quo, ex exercitationem facilis itaque architecto blanditiis, sed delectus maiores,
-            nesciunt earum consequuntur tenetur quas voluptatum veritatis minima facere eveniet! Dolor, vitae
-            excepturi. Dignissimos, eligendi nulla enim sapiente, consequatur omnis commodi repudiandae adipisci
-            veritatis at quidem molestiae culpa sed consectetur expedita vel id soluta beatae repellendus? Pariatur
-            culpa, similique cum amet molestias consequatur. Exercitationem eos sint voluptatibus, dolorum obcaecati
-            iure amet perspiciatis et minus? Officiis commodi quia tempora. Et aperiam, repellendus pariatur quae
-            illum asperiores aspernatur incidunt minima. Nemo fuga excepturi eveniet fugiat ipsa qui in earum
-            consectetur blanditiis eligendi aspernatur culpa magnam quas totam, voluptas ullam eius quo asperiores
-            unde ratione, sed ipsum! Numquam quis odit ratione commodi autem, praesentium totam odio debitis optio
-            quod rerum architecto labore aliquid corporis? Officia delectus esse asperiores, non provident eos
-            consectetur! Ad delectus quod veniam id harum. A aliquam odio ducimus molestiae iure maiores. Ratione
-            quibusdam, minus vitae soluta nam officiis incidunt porro earum amet saepe aspernatur iure repellat, in
-            quisquam nostrum. Iusto quo, eius rerum deleniti incidunt temporibus! Consectetur sequi ratione vel
-            voluptas. Hic sunt incidunt voluptatum quisquam enim quis corporis laboriosam placeat magnam. Autem
-            debitis a magni sit quia perferendis ut, cupiditate quas architecto voluptas illum obcaecati facilis
-            iste. Libero impedit placeat ullam ea voluptas. Quae neque, adipisci eum nisi mollitia deleniti autem
-            molestias itaque, necessitatibus praesentium aliquam rerum magnam eligendi alias harum saepe,
-            reprehenderit ut optio ratione vero! Tempore, eos veritatis odit repellendus iure omnis commodi unde
-            quaerat blanditiis eaque error dolor labore, debitis, obcaecati sint autem ea iusto. Odit, illo
-            repellendus!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+@media (max-width:900px){
+  .container-about{
+    flex-direction: column-reverse;
+  }
+  .massage-about-us-all{
+  padding-left: 1%;
+  width: 100%;
+}
 
 
+.massage-about-card{
+  display: grid;
+}
 
-<!-- teacher's say ends -->
+.massage-about-img img{
+  margin: 130px 30px 20px 150px;
+}
+
+.massage-about-title-one{
+  margin-left: 3%;
+  
+}
+.massage-about-line{
+  margin-left: 3%;
+}
+}
+
+@media (max-width:900px){
+.massage-about-img img{
+  margin: 130px 30px 20px 10px;
+}
+
+
+}
