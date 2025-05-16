@@ -230,3 +230,27 @@ menuHomeAll .addEventListener('click',()=>{
   menuHome.style.backgroundColor = "#0c164b75"
 //  menuHome.style.display = "none"
 })
+
+
+const facilitiescard = document.getElementsByClassName('.facilities-card')
+const facip = document.getElementsByClassName('.faci-p')
+
+facilitiescard.addEventListener('mouseover',()=>{
+  facip.style.backgroundColor = "#fff";
+})
+
+
+
+ // Toggle section collapsible
+  document.querySelectorAll('.section-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const column = header.parentElement;
+      column.classList.toggle('open');
+    });
+  });
+  // Toggle dropdowns inside notice
+  document.querySelectorAll('.dropdown-title').forEach(title => {
+    title.addEventListener('click', () => {
+      title.parentElement.classList.toggle('open');
+    });
+  });
