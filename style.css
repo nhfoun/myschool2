@@ -2850,10 +2850,10 @@ canvas {
     }
     .intro {
       margin-bottom: 20px;
-      background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('school\ logo.jpg');
-      background-position: center;
-      background-size: 50%;
-      background-repeat: no-repeat;
+     
+    }
+    .about-video-title{
+      margin-bottom: 20px;
     }
     .intro p{
       font-size: 18px;
@@ -3493,4 +3493,140 @@ canvas {
 }
 
 
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .button-group button {
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-size: 14px;
+      
+    }
+    .button-group a{
+      color:#000;
+    }
+
+    .button-group button:hover {
+      background-color: #f0f0f0;
+    }
+
+    @media (max-width: 600px) {
+      .button-group {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
 /* Gallery ends */
+
+
+
+
+/* Contact us starts */
+
+/* ----------v---------- */
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe{
+    width: 100%;
+}
+
+.contactus{
+    width: 80%;
+    margin: auto;
+
+}
+.contact-cola{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.contact-cola div{
+   display: flex;
+   align-items: center;
+   margin-bottom: 40px;
+}
+.contact-cola div .fa{
+    font-size: 28px;
+    color: #aa0909;
+    margin: 5px;
+    margin-right: 30px;
+}
+.contact-cola div p{
+    padding: 0;
+}
+.contact-cola div  h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+.contact-cola input , .contact-cola textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px ;
+    box-sizing: border-box;
+    outline: none;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+}
+.rowa{
+  justify-content: space-around;
+}
+.location h4{
+    font-size: 35px ;
+    text-align: center;
+    margin-bottom: 30px;
+    color: RGB(16, 24, 57);
+}
+@media (max-width:700px) {
+    .rowa {
+        flex-direction: column;
+    }
+    .sub-header h1{
+        margin-top:150px ;
+    }
+}
+
+
+
+
+
+
+
+
+/* Contact us ends */
+
+/* top */
+
+
+
+.top{
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+    background-color: RGB(16, 24, 57);
+    border-radius: 12px;
+}
+.top i{
+    color:#aa0909;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+
+
+
+/* top ends */
